@@ -1,0 +1,274 @@
+/* 폰트 설정 */
+
+@font-face {
+    font-family: 'SuseongBatang'; 
+    src: url("font/SuseongBatang.woff"), url("font/SuseongBatang.tft;") , url("font/NanumBarunGothicBold.otf");
+}
+
+
+/* body 기본 스타일 설정 */
+body {
+    font-family: 'SuseongBatang';
+    margin: 0;
+    padding: 0;
+ 
+}
+
+/* a 스타일 설정*/
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0); 
+}
+
+/* 헤더 스타일 설정 */
+header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+}
+
+/* 내비게이션 바 스타일 설정 */
+nav {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* 내비게이션 바 내의 ul 요소 스타일 설정 */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+/* 내비게이션 바 내의 li 요소 스타일 설정 */
+nav ul li {
+    position: relative;
+    padding: 0 10px;
+}
+
+/* 내비게이션 바 내의 a 요소 스타일 설정 */
+nav ul li a {
+    color: rgb(0, 0, 0);
+    font-size: large;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* 내비게이션 바 내의 a 요소 호버 스타일 설정 */
+nav ul li a:hover {
+    background-color: #c5e4f1;
+}
+
+/* 드롭다운 컨텐츠 스타일 설정 */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.0);
+    z-index: 2;
+    flex-direction: column;
+}
+
+/* 드롭다운 컨텐츠 내의 li 요소 스타일 설정 */
+.dropdown-content li {
+    display: block;
+    
+    
+}
+
+/* 드롭다운 컨텐츠 내의 li 요소 호버 스타일 설정 */
+.dropdown-content li:hover {
+    background-color: #c5e4f1;
+    display: block;
+    
+    
+}
+
+/* 드롭다운 컨텐츠 내의 a 요소 스타일 설정 */
+.dropdown-content li a {
+    padding: 12px 16px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    
+}
+
+
+/* 드롭다운 호버 시 드롭다운 컨텐츠 표시 */
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+/* 배너 스타일 설정*/
+.banner {
+    position: relative;
+}
+
+/* 메인화면 배너 내의 이미지 스타일 설정*/
+.banner_main img{
+    width: 100%;
+    height: auto;
+   
+}
+
+/* 각 카테고리의 배너 설정 */
+.banner_category  {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner_category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.banner_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    z-index: 1;
+    font-size: x-large;
+}
+  
+/* 배너 내의 이미지 스타일 설정*/
+.banner img{
+    width: 100%;
+    height: auto;
+}
+
+/* 본문과 카테고리별 페이지 이동 위치 맞추기*/
+.flex_container {
+    display: flex;
+
+}
+
+
+.side_list {
+    font-size: large;
+    width: 100px;
+    padding: 30px;
+    margin: 20px;
+    background-color: #ffffff; 
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.side_list li {
+    list-style-type: square;
+    text-align: center;
+    padding: 10px;
+}
+
+#side_list_top  {
+    list-style-type: none;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+/* 컨텐츠 스타일 설정*/
+.content {
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+    
+}
+
+.content p {
+    font-size: 16px
+}
+
+
+
+.content-history-images {
+    text-align: center;
+
+}
+
+.content-history table td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+}
+
+    
+.row_1 , .row_2, .row_3 {
+    text-align: center;
+}
+
+
+/* 카드 스타일 설정 */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    text-align: center;
+    position: relative;
+}
+
+.card img {
+    border-radius: 8px;
+    width: 50%;
+    height: 50%;
+}
+
+.card p {
+    padding: 10px ;
+    font-size: 20px;
+    color: #333;
+}
+
+.reservation img{
+    width: auto;
+    height: auto;
+}
+
+
+/* 각주 스타일 설정*/
+footer {
+    background-color: #c5e4f1;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: auto;
+    
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소개 | 대구 나들이</title>
+    <link type = "text/css" rel="stylesheet" href="_styles.css">
+    
+</head>
+<body>
+
+    <header>
+        <h1><a href="0_index.html">대구 나들이</a></h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="0_index.html">홈</a>
+                <ul class="dropdown-content">
+                    <li><a href ="1_about.html">소개</a></li>
+                    <li><a href ="1_history.html">역사</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="2_tourism.html">관광</a>
+                <ul class="dropdown-content">
+                    <li><a href ="2_recommanded_place.html">가볼 만한 곳</a></li>
+                    <li><a href ="2_recommanded_course.html">추천 코스</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="3_hrs.html">숙박/식당/쇼핑</a>
+                <ul class="dropdown-content">
+                    <li><a href ="3_hotel.html">숙박</a></li>
+                    <li><a href ="3_restaurant.html">식당</a></li>
+                    <li><a href ="3_shopping.html">쇼핑</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="4_event.html">이벤트 및 축제</a>
+                <ul class="dropdown-content">
+                    <li><a href ="4_festival.html">이벤트 및 축제 소개</a></li>
+                    <li><a href ="4_calendar.html">캘린더</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="5_transport.html">교통</a>
+                <ul class="dropdown-content">
+                    <li><a href ="5_transportation.html">공항&역&터미널</a></li>
+                </ul>
+            </li>
+            
+    </nav>
+
+   <!-- 각 카테고리에 맞는 배너 -->
+    <div class="banner_category">
+        <img src="images/banner_1.jpg" alt="배너 이미지">
+        <div class="banner_text">
+            <h3>소개</h3>
+        </div>
+    </div>
+
+    <div class="flex_container">
+        <aside id="left">
+
+            <!-- 현재 페이지의 카테고리 li로 나열-->
+            <ul class = "side_list">
+                <p id = "side_list_top"><a href="0_index.html">홈</a></p>   
+                <li><a href="1_about.html">소개</a></li>
+                <li><a href=1_history.html>역사</a></li>
+            </ul>
+        </aside>
+        
+        <!-- 이 아래에 내용을 써주시면 됩니다.-->
+        <div class="content">
+            <div class="p-container">
+                <h1>아름다운 도시, 대구</h1>
+                <br>
+                <p>
+                    인구 250만의 대도시이자 영남지역의 중심 도시인 대구는 옛신라와  가야의 찬란한 문화를 이어 받은 유서 깊은 고장이다.
+                </p>
+                <p> 
+                    수많은 문화유적이 존재 하고, 다양한 문화체험이 가능한 전통과    문화가 공존하는 관광거점 도시 대구에서 즐거운 여행을 다녀보자.
+                </p>
+            </div>
+            
+            <div class="card-container">
+                <div class="card">
+                    <img src="images/mountain.jpg" alt="팔공산">
+                    <p>대구는 팔공산, 비슬산 등이 사방으로 둘러싼 가운데 분지로 형성되어 있으며 금호강, 신천 주변으로 시가지가 발달해 있다. <br>낙동강은 대구의 서쪽 경계 지역을 감싸 안으며 흐르고 있다.</p>
+                </div>
+                <div class="card">
+                    <img src="images/bunji.png" alt="분지형 지형">
+                    <p>분지형 지형으로 대한민국에서 가장 기온이 높은 편에 속하는 도시이다. <br>건조하고 무더운 날씨를 극복하기 위해 거리엔 많은 수목을 심은 대구는 세계 선진환경도시와 함께 국제에너지 기구(IEA)로부터 솔라시티(Solar City)로 선정된 환경 친화적인 깨끗하고 살기 좋은 도시이다.</p>
+                </div>
+                <div class="card">
+                    <img src="images/stadium.jpg" alt="서울과 300km">
+                    <p>대구는 서울과 300km, 부산과는 120km 떨어져 있으며 전국곳곳으로 열차, 도로가 연결된 교통의 요충지이다. <br>영남권 정치 경제, 행정, 교통, 문화의 중심지이자 2002 FIFA 월드컵과 2003 하계 유니버시아드 대회, 2011 세계육상선수권대회를 개최한 세계 인류의 경쟁력 있는 도시이다.</p>
+                </div>
+                <div class="card">
+                    <img src="images/hightech.jpg" alt="자동차 부품 산업">
+                    <p>대구는 자동차 부품산업과 교묘가치화를 통한 섬유패션 산업이 발달하고 그린에너지, IT 융복합 산업을 선도전략산업으로 육성하고 있다. <br>첨단의료복합단지와 대구테크노폴리스 조성으로 더 큰 미래를 준비하고 있다.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <footer>
+        &copy; 웹 프로그래밍 기초 9조 
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캘린더 | 대구 나들이</title>
+    <link type = "text/css" rel="stylesheet" href="_styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/main.min.css" rel="stylesheet">
+
+    <style>
+        #calendar {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="0_index.html">대구 나들이</a></h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="0_index.html">홈</a>
+                <ul class="dropdown-content">
+                    <li><a href ="1_about.html">소개</a></li>
+                    <li><a href ="1_history.html">역사</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="2_tourism.html">관광</a>
+                <ul class="dropdown-content">
+                    <li><a href ="2_recommanded_place.html">가볼 만한 곳</a></li>
+                    <li><a href ="2_recommanded_course.html">추천 코스</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="3_hrs.html">숙박/식당/쇼핑</a>
+                <ul class="dropdown-content">
+                    <li><a href ="3_hotel.html">숙박</a></li>
+                    <li><a href ="3_restaurant.html">식당</a></li>
+                    <li><a href ="3_shopping.html">쇼핑</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="4_event.html">이벤트 및 축제</a>
+                <ul class="dropdown-content">
+                    <li><a href ="4_festival.html">이벤트 및 축제 소개</a></li>
+                    <li><a href ="4_calendar.html">캘린더</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="5_transport.html">교통</a>
+                <ul class="dropdown-content">
+                    <li><a href ="5_transportation.html">공항&역&터미널</a></li>
+                </ul>
+            </li>
+            
+    </nav>
+
+    <div class="banner_category">
+        <img src="images/banner_event.jpg" alt="배너 이미지">
+        <div class="banner_text">
+            <h3>캘린더</h3>
+        </div>
+    </div>
+
+    <div class="flex_container">
+
+        <aside id="left">
+            <ul class="side_list">
+                <p id = "side_list_top"><a href="4_event.html">이벤트 및 축제</a></p>
+                <li><a href="4_festival.html">이벤트 및 축제 소개</a></li>
+                <li><a href="4_calendar.html">캘린더</a></li>
+            </ul>
+        </aside>
+
+        <div class="content">
+    
+        <section id="event_calendar" class="content">
+            <div class="event">
+                <h2>대구치맥페스티벌</h2>
+                <p>
+                    매년 여름, 대구에서 치킨과 맥주의 조합을 테마로 한 대구 페스티벌입니다. 축제 기간 동안 치킨과 시원한 맥주를 즐기며 가수들의 공연을 관람할 수 있습니다. 유명 치킨 프렌차이즈들이 참여하기 때문에 다양한 치킨을 한자리에서 골고루 맛볼 수 있습니다.
+                </p>
+                <p>Date: 2024-07-20 to 2024-07-25</p>
+                <p>Location: 대구 중구 동성로</p>
+            </div>
+
+            <div class="event">
+                <h2>대구데이 페스티벌</h2>
+                <p>
+                    대구의 다양한 문화를 7가지 주제로 나누고 주제별로 공연, 전시, 체험, 판매 등 다양한 세대들이 공감하는 차별화된 콘텐츠로 구성된 축제입니다.
+                </p>
+                <p>Date: 2024-08-15 to 2024-08-17</p>
+                <p>Location: 대구광역시 중구 삼덕동2가</p>
+            </div>
+        </section>
+
+        <div id="calendar"></div>
+    
+        <!--moment.js 라이브러리 로드 (날짜와 시간 처리를 위해 사용된다.)-->
+        <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+
+        <!--FullCalendar 라이브러리 로드 (캘린더를 생성하기 위해 사용된다.)-->
+        <!--DOM이 완전히 로드된 후에 실행되는 스크립트이다.-->
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/main.min.js"></script>
+
+        <script>
+            // DOMContentLoaded 이벤트 리스너 추가 
+            document.addEventListener('DOMContentLoaded', function() {
+                //캘린더를 표시할 div 요소 선택
+                var calendarEl = document.getElementById('calendar');
+                //FullCalendar 객체 생성 및 설정
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    //초기 뷰 설정 (월간 달력 보기) 
+                    initialView: 'dayGridMonth',
+                    events: [
+                        {
+                            title: '대구치맥페스티벌',
+                            start: '2024-07-20',
+                            end: '2024-07-25'
+                        },
+                        {
+                            title: '대구데이 페스티벌',
+                            start: '2024-08-15',
+                            end: '2024-08-17'
+
+                            
+                        }
+                    ]
+                });
+                calendar.render();
+            });
+        </script>
+        
+        </div>
+
+    </div>
+    
+
+    <footer>
+        &copy; 웹 프로그래밍 기초 9조 
+    </footer>
+</body>
+</html>
+
+<style>
+.event {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.event h2 {
+    color: #333;
+}
+
+.event p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+</style>
